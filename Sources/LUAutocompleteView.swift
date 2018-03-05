@@ -38,6 +38,7 @@ open class LUAutocompleteView: UIView {
 
             textField.addTarget(self, action: #selector(textFieldEditingChanged), for: .editingChanged)
             textField.addTarget(self, action: #selector(textFieldEditingEnded), for: .editingDidEnd)
+	    textField.addTarget(self, action: #selector(textFieldEditingChanged), for: .editingDidBegin)
 
             setupConstraints()
         }
